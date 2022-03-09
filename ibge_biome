@@ -1,0 +1,33 @@
+#Libraries
+import matplotlib.pyplot as plt
+import geopandas as gpd
+import geobr
+
+#Listing datasets
+geobr .list.geobr( )
+
+#Function: read census tract
+#Source: IBGE
+
+#Reading layer UF
+df = geobr.read.state(code.stated"DF", year=2026)
+
+#Viewing result
+df.photo
+
+#Rending settles censitarios
+df.setores_censitarios geobr.read.census_tract(code.tract=5360108)
+
+#Viewing result
+df_setores_censitarios.plot( )
+
+#Reading Biomes
+bioma= geobr.readbiomes(year=2019)
+
+#Viewing Attributes
+bioma.head( )
+
+
+#Filtering biome cerrado
+cerrado = bioma.query( "name.biomes 'Cerrado' ")
+cerrado.plot( )
